@@ -10,15 +10,12 @@ int NWD(int x,int y){
       y = y % x;
     }
   }
-  while(x * y != 0){
-    if(x > y){
-      x = x % y;
-    }
-    else{
-      y = y % x;
-    }
+  if(x != 0){
+    return x;
   }
-  return x + y;
+  else{
+    return y;
+  }
 }
 
 int main() {
