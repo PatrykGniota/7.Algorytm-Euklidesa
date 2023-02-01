@@ -1,16 +1,19 @@
 #include <iostream>
 using namespace std;
+int NWD(int x,int y){
+  while(x != y){
+    if(x > y){
+      x = x - y;
+    }
+    else{
+      y = y - x;
+    }
+  }
+  return x;
+}
 
 int main() {
   int a = 12;
   int b = 20;
-  while(a != b){
-    if(a > b){
-      a = a - b;
-    }
-    else{
-      b = b - a;
-    }
-  }
-  cout << "NWD = " << a;
+  cout << "NWD = " << NWD(a,b);
 }
